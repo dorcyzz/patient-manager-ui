@@ -1,0 +1,32 @@
+<mat-grid-list cols="1" rows="1" rowHeight="3:1">
+  <mat-grid-tile>
+    <mat-card id="card">
+      <mat-card-title>
+        Contact
+      </mat-card-title>
+
+      <mat-card-content>
+
+        <mat-form-field>
+          <input matInput placeholder="Nom" [(ngModel)]="name">
+        </mat-form-field>
+        <br/>
+
+        <mat-form-field>
+          <input matInput placeholder="Adresse email" [(ngModel)]="email">
+        </mat-form-field>
+        <br/>
+
+        <mat-form-field>
+          <textarea matInput placeholder="Message" rows="20" [(ngModel)]="message"></textarea>
+        </mat-form-field>
+        <br/>
+
+        <button mat-raised-button color="primary" style="margin-right:5px;" (click)="onSubmit()">Envoyer</button>
+
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<ngb-alert #selfClosingAlert *ngIf="successMessage" type="success" (closed)="successMessage = ''">{{ successMessage }}</ngb-alert>

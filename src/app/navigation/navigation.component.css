@@ -1,0 +1,80 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.mat-sidenav-container {
+  height: 100vh;
+}
+
+.mat-sidenav-container .mat-sidenav {
+  background-color: #0101ab;
+  padding: 10px;
+  min-width: 150px;
+}
+
+.mat-sidenav-container .mat-sidenav label {
+  color: white;
+  font: 500 20px/32px Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-sidenav-container .mat-sidenav nav {
+  margin-top: 15px;
+}
+
+.mat-sidenav-container .mat-sidenav nav a {
+  display: block;
+  outline: 0px;
+  margin: 5px 0px;
+  text-decoration: none;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+.mat-sidenav-container .mat-sidenav nav a:hover {
+  color: yellow;
+}
+
+.mat-sidenav-container .mat-sidenav nav a.active {
+  color: yellow;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.mat-sidenav-container .mat-sidenav-content .mat-toolbar {
+  height: 40px;
+  padding: 0px;
+}
+
+.mat-sidenav-container .mat-sidenav-content .mat-toolbar header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.mat-sidenav-container .mat-sidenav-content .mat-toolbar header .mat-icon {
+  cursor: pointer;
+  font-size: 32px;
+  width: 32px;
+  height: 32px;
+  margin: 4px;
+}
+
+.mat-sidenav-container .mat-sidenav-content .mat-toolbar header nav a {
+  color: white;
+  padding: 5px 10px;
+  margin-left: 5px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.mat-sidenav-container .mat-sidenav-content .mat-toolbar header label {
+  margin: 4px;
+}
+
+.mat-sidenav-container .mat-sidenav-content .mat-toolbar header nav a:hover {
+  color: yellow;
+}
+
+.mat-sidenav-container .mat-sidenav-content .mat-toolbar header nav a.active {
+  color: yellow;
+  background-color: rgba(0, 0, 0, 0.2);
+}

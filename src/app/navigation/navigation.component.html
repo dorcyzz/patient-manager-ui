@@ -1,0 +1,26 @@
+<mat-sidenav-container>
+
+  <mat-sidenav #sidenav mode="over">
+    <label>Patient Manager</label>
+    <hr/>
+    <nav>
+      <a (click)="clickHandler()" routerLink="login" routerLinkActive="active">Identification</a>
+      <a (click)="clickHandler()" routerLink="patients" routerLinkActive="active">Patients</a>
+      <a (click)="clickHandler()" routerLink="history" routerLinkActive="active">Historique</a>
+      <a (click)="clickHandler()" routerLink="about" routerLinkActive="active">A propos</a>
+      <a (click)="clickHandler()" routerLink="contact" routerLinkActive="active">Contact</a>
+    </nav>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <header>
+        <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+        <label>Patient Manager</label>
+      </header>
+    </mat-toolbar>
+    <section>
+      <router-outlet></router-outlet>
+    </section>
+  </mat-sidenav-content>
+</mat-sidenav-container>

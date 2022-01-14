@@ -1,0 +1,76 @@
+<form autocomplete="off">
+  <div class="row">
+    <mat-form-field class="col-4">
+      <input [(ngModel)]="id" matInput name="id" placeholder="Identifiant" readonly>
+    </mat-form-field>
+    <mat-form-field class="col-4">
+      <input [(ngModel)]="firstName" matInput name="firstName" placeholder="Prénom">
+    </mat-form-field>
+    <mat-form-field class="col-4">
+      <input [(ngModel)]="lastName" matInput name="lastName" placeholder="Nom">
+    </mat-form-field>
+  </div>
+
+  <div class="row">
+    <mat-form-field class="col-4">
+      <input [matDatepicker]="dp" matInput placeholder="Date de naissance">
+      <mat-datepicker-toggle [for]="dp" matSuffix></mat-datepicker-toggle>
+      <mat-datepicker #dp></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field class="col-4">
+      <mat-label>Sexe</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let gender of genders" [value]="gender.value">
+          {{gender.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="col-8">
+      <input matInput name="nationalIdentificationNumber" placeholder="Numéro d'identification national">
+    </mat-form-field>
+  </div>
+
+  <div class="row">
+    <mat-form-field class="col-10">
+      <input matInput name="street" placeholder="Rue">
+    </mat-form-field>
+    <mat-form-field class="col-2">
+      <input matInput name="streetNumber" placeholder="Numéro">
+    </mat-form-field>
+  </div>
+
+  <div class="row">
+    <mat-form-field class="col-4">
+      <input matInput name="postalCode" placeholder="Code postal">
+    </mat-form-field>
+    <mat-form-field class="col-8">
+      <input matInput name="city" placeholder="Ville">
+    </mat-form-field>
+  </div>
+
+  <div class="row">
+    <mat-form-field class="col-6">
+      <input matInput name="country" placeholder="Pays">
+    </mat-form-field>
+  </div>
+
+  <div class="row">
+<!--    <mat-form-field style="width: 100%">-->
+<!--      <textarea matInput name="notes" placeholder="Notes" rows="20"></textarea>-->
+<!--    </mat-form-field>-->
+
+    <mat-card class="example-card">
+      <mat-card-title-group>
+        <mat-card-title>Shiba Inu</mat-card-title>
+        <mat-card-subtitle>Small</mat-card-subtitle>
+      </mat-card-title-group>
+      <mat-card-content>
+        {{longText}}
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div>
+    <button (click)="save()" mat-stroked-button>Sauver</button>
+  </div>
+</form>
